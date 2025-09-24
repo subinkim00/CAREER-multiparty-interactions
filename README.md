@@ -9,7 +9,7 @@
 
 ### confirm_and_visualize_multiparty_in_eaf.py
 - USE: iterates through `multispeaker_output.xlsx` to find recordings with multiparty interactions through the following logic:
-    1. identify center of interaction by finding a point in time in the recording where the time between the offset of the previous annotation and the onset of the next annotation in non-CHI tiers is < 2 minutes
+    1. identify center of interaction by finding a point in time in the recording where the time between the offset of the previous annotation and the onset of the next annotation in non-CHI tiers is < 30 seconds
     2. from there, extend outwards to find the boundaries of the interaction. as we extend backwards and forwards, we've reached an interactional boundary if there is no annotation from ANY participant (including CHI) within 10 seconds from the current annotation
 - OUTPUT: interaction plots for each recording are saved to `interaction_plots` to visualize participant turns over the course of the recording. `multi_party_interactions.csv` stores this in csv form
 
